@@ -1,6 +1,6 @@
 # This is a sample Python script.
 import mlrun
-from mlrun.platforms import auto_mount
+from mlrun.platforms import auto_mount, mount_v3io
 
 project_name_base = 'test-mlrun'
 
@@ -18,3 +18,11 @@ test_func.apply(auto_mount())
 fetch_data_run = test_func.run(name='step_one',
                                handler='fetch_data',
                                inputs={'dataset_url': 'https://s3.wasabisys.com/iguazio/data/Taxi/taxi_zones.csv'})
+
+analyze_data_run = test_func.run(name='analyze_data',
+                               handler='analyze_data',
+                               inputs={'dataset': fetch_data_run.outputs['test-dataset']})
+
+
+
+
