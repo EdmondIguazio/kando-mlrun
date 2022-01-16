@@ -30,6 +30,6 @@ pipline_trigger_fun = mlrun.code_to_function("pipeline-trigger",
 
 pipline_trigger_fun.apply(auto_mount())
 
-pipline_trigger_fun.add_trigger('cron', CronTrigger(schedule="0 8 * * *"))
+pipline_trigger_fun.add_trigger('cron', CronTrigger(schedule="0 0 8 * * *"))
 
 pipline_trigger_fun.deploy()
