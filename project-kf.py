@@ -17,6 +17,8 @@ project.set_workflow('main', 'workflow.py', embed=True)
 # This will create the YAML file locally
 project.save()
 
+project.run('main')
+
 # ======================================================================================================
 # Now upload, by code or manually, the YAML to V3IO /User/remote-project/project.yaml
 # ======================================================================================================
