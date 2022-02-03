@@ -2,6 +2,10 @@ from mlrun.execution import MLClientCtx
 from mlrun.datastore import DataItem
 from os import path
 
+class EdmondTestClass:
+    def method(self):
+        pass 
+
 
 def fetch_data(context: MLClientCtx, dataset_url: DataItem):
 
