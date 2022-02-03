@@ -1,11 +1,12 @@
 from mlrun.execution import MLClientCtx
 from mlrun.datastore import DataItem
 from os import path
+import pickle5 as pickle
 
-class EdmondTestClass:
-    def method(self):
-        pass 
-
+def train_model(context: MLClientCtx):
+    c = EdmondTestClass()
+    p = pickle.dumps(c)
+    
 
 def fetch_data(context: MLClientCtx, dataset_url: DataItem):
 
