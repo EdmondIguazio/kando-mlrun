@@ -2,6 +2,7 @@ from mlrun.execution import MLClientCtx
 from mlrun.datastore import DataItem
 from os import path
 import pickle5 as pickle
+from myclass import EdmondTestClass
 
 def train_model(context: MLClientCtx):
     c = EdmondTestClass()
